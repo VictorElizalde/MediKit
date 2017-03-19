@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		982FA0221E7E0F0D0049BD69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FA0211E7E0F0D0049BD69 /* AppDelegate.swift */; };
-		982FA0241E7E0F0D0049BD69 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FA0231E7E0F0D0049BD69 /* FirstViewController.swift */; };
-		982FA0261E7E0F0D0049BD69 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FA0251E7E0F0D0049BD69 /* SecondViewController.swift */; };
+		982FA0241E7E0F0D0049BD69 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FA0231E7E0F0D0049BD69 /* InfoVC.swift */; };
+		982FA0261E7E0F0D0049BD69 /* HospitalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FA0251E7E0F0D0049BD69 /* HospitalsVC.swift */; };
 		982FA0291E7E0F0D0049BD69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982FA0271E7E0F0D0049BD69 /* Main.storyboard */; };
 		982FA02B1E7E0F0D0049BD69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 982FA02A1E7E0F0D0049BD69 /* Assets.xcassets */; };
 		982FA02E1E7E0F0D0049BD69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982FA02C1E7E0F0D0049BD69 /* LaunchScreen.storyboard */; };
+		982FA0381E7E17760049BD69 /* PhoneNumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FA0371E7E17760049BD69 /* PhoneNumVC.swift */; };
+		982FA03A1E7E19170049BD69 /* MedsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982FA0391E7E19170049BD69 /* MedsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		982FA01E1E7E0F0D0049BD69 /* MediKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		982FA0211E7E0F0D0049BD69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		982FA0231E7E0F0D0049BD69 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		982FA0251E7E0F0D0049BD69 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		982FA0231E7E0F0D0049BD69 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		982FA0251E7E0F0D0049BD69 /* HospitalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalsVC.swift; sourceTree = "<group>"; };
 		982FA0281E7E0F0D0049BD69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		982FA02A1E7E0F0D0049BD69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		982FA02D1E7E0F0D0049BD69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		982FA02F1E7E0F0D0049BD69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		982FA0371E7E17760049BD69 /* PhoneNumVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneNumVC.swift; path = ../PhoneNumVC.swift; sourceTree = "<group>"; };
+		982FA0391E7E19170049BD69 /* MedsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				982FA0211E7E0F0D0049BD69 /* AppDelegate.swift */,
-				982FA0231E7E0F0D0049BD69 /* FirstViewController.swift */,
-				982FA0251E7E0F0D0049BD69 /* SecondViewController.swift */,
+				982FA0231E7E0F0D0049BD69 /* InfoVC.swift */,
+				982FA0251E7E0F0D0049BD69 /* HospitalsVC.swift */,
+				982FA0371E7E17760049BD69 /* PhoneNumVC.swift */,
+				982FA0391E7E19170049BD69 /* MedsVC.swift */,
 				982FA0271E7E0F0D0049BD69 /* Main.storyboard */,
 				982FA02A1E7E0F0D0049BD69 /* Assets.xcassets */,
 				982FA02C1E7E0F0D0049BD69 /* LaunchScreen.storyboard */,
@@ -140,9 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				982FA0261E7E0F0D0049BD69 /* SecondViewController.swift in Sources */,
+				982FA0261E7E0F0D0049BD69 /* HospitalsVC.swift in Sources */,
 				982FA0221E7E0F0D0049BD69 /* AppDelegate.swift in Sources */,
-				982FA0241E7E0F0D0049BD69 /* FirstViewController.swift in Sources */,
+				982FA03A1E7E19170049BD69 /* MedsVC.swift in Sources */,
+				982FA0381E7E17760049BD69 /* PhoneNumVC.swift in Sources */,
+				982FA0241E7E0F0D0049BD69 /* InfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

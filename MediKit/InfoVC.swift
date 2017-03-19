@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  InfoVC.swift
 //  MediKit
 //
 //  Created by Victor Elizalde on 3/18/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class InfoVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
