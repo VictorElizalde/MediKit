@@ -52,6 +52,7 @@ class MedsTableViewController: UITableViewController, protocoloAgregaMedicina {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = listaMeds[indexPath.row].nombre
+        cell.detailTextLabel?.text = "\(listaMeds[indexPath.row].restantes!)"
 
         return cell
     }
