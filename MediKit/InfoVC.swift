@@ -20,7 +20,7 @@ class InfoVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         empresaLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 18.0)
         misionLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
         visionLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
         nosotrosLabel.font = UIFont.boldSystemFont(ofSize: 17.0)

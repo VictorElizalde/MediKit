@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Medikit sin fondo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "2000px-Medkit_font_awesome-red.svg.png",
       "scale" : "2x"
     },
     {
