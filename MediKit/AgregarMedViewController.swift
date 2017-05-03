@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 protocol protocoloAgregaMedicina {
-    func agregaMedicina(nombre: String, dias: Int, semanas: Int, minutos: Int, horas: Int, restantes: Int) -> Void
+    func agregaMedicina(nombre: String, dias: Int, semanas: Int, minutos: Int, horas: Int, identifiers: [String]) -> Void
     
 }
 
@@ -86,29 +86,31 @@ class AgregarMedViewController: UIViewController {
                         
                         if nom != "" && dias != nil && minutos != nil {
                             
-                            delegado.agregaMedicina(nombre: nom, dias: dias!, semanas: semanas, minutos: minutos!, horas: horas, restantes: restantes)
-                            navigationController!.popViewController(animated: true)
-                            
                             var time = 5
+                            var identifiers = [String]()
                             
                             while(restantes != 0) {
                                 
                                 var content = UNMutableNotificationContent()
                                 
-                                content.title = "Tomate tu medicina"
-                                content.body = nom
+                                content.title = "Tomate tu Medicina"
+                                content.body = "\(nom) - \(restantes - 1) restantes"
                                 content.sound = UNNotificationSound.default()
                                 
                                 var trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
-                                var request = UNNotificationRequest(identifier: nom, content: content, trigger: trigger)
+                                var request = UNNotificationRequest(identifier: "\(nom)_\(restantes)", content: content, trigger: trigger)
                                 
                                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                                
+                                identifiers.append("\(nom)_\(restantes)")
                                 
                                 restantes = restantes - 1
                                 time = time + time
                                 
                             }
-
+                            
+                            delegado.agregaMedicina(nombre: nom, dias: dias!, semanas: semanas, minutos: minutos!, horas: horas, identifiers: identifiers)
+                            navigationController!.popViewController(animated: true)
                             
                         } else {
                             
@@ -141,28 +143,31 @@ class AgregarMedViewController: UIViewController {
 
                         if nom != "" && dias != nil && horas != nil {
                             
-                            delegado.agregaMedicina(nombre: nom, dias: dias!, semanas: semanas, minutos: minutos, horas: horas!, restantes: restantes)
-                            navigationController!.popViewController(animated: true)
-                            
-                            var time = 15
+                            var time = 5
+                            var identifiers = [String]()
                             
                             while(restantes != 0) {
                                 
                                 var content = UNMutableNotificationContent()
                                 
-                                content.title = "\(nom) - \(restantes) restantes"
-                                content.body = "Tomate tu Medicina"
+                                content.title = "Tomate tu Medicina"
+                                content.body = "\(nom) - \(restantes - 1) restantes"
                                 content.sound = UNNotificationSound.default()
                                 
                                 var trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
-                                var request = UNNotificationRequest(identifier: "nom_\(restantes)", content: content, trigger: trigger)
+                                var request = UNNotificationRequest(identifier: "\(nom)_\(restantes)", content: content, trigger: trigger)
                                 
                                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                                
+                                identifiers.append("\(nom)_\(restantes)")
                                 
                                 restantes = restantes - 1
                                 time = time + time
                                 
                             }
+                            
+                            delegado.agregaMedicina(nombre: nom, dias: dias!, semanas: semanas, minutos: minutos, horas: horas!, identifiers: identifiers)
+                            navigationController!.popViewController(animated: true)
                             
                         } else {
                             
@@ -174,7 +179,6 @@ class AgregarMedViewController: UIViewController {
                             present(alerta, animated: true, completion: nil)
                             
                         }
-
                         
                     } else {
                         
@@ -195,7 +199,6 @@ class AgregarMedViewController: UIViewController {
                 alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 
                 present(alerta, animated: true, completion: nil)
-
                 
             }
             
@@ -217,21 +220,19 @@ class AgregarMedViewController: UIViewController {
 
                         if nom != "" && semanas != nil && minutos != nil {
                             
-                            delegado.agregaMedicina(nombre: nom, dias: dias, semanas: semanas!, minutos: minutos!, horas: horas, restantes: restantes)
-                            navigationController!.popViewController(animated: true)
-                            
                             var time = 5
+                            var identifiers = [String]()
                             
                             while(restantes != 0) {
                                 
                                 var content = UNMutableNotificationContent()
                                 
-                                content.title = "Tomate tu medicina"
-                                content.body = nom
+                                content.title = "Tomate tu Medicina"
+                                content.body = "\(nom) - \(restantes - 1) restantes"
                                 content.sound = UNNotificationSound.default()
                                 
                                 var trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
-                                var request = UNNotificationRequest(identifier: nom, content: content, trigger: trigger)
+                                var request = UNNotificationRequest(identifier: "nom_\(restantes)", content: content, trigger: trigger)
                                 
                                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
                                 
@@ -239,6 +240,9 @@ class AgregarMedViewController: UIViewController {
                                 time = time + time
                                 
                             }
+                            
+                            delegado.agregaMedicina(nombre: nom, dias: dias, semanas: semanas!, minutos: minutos!, horas: horas, identifiers: identifiers)
+                            navigationController!.popViewController(animated: true)
                             
                         } else {
                             
@@ -271,21 +275,19 @@ class AgregarMedViewController: UIViewController {
 
                         if nom != "" && semanas != nil && horas != nil {
                             
-                            delegado.agregaMedicina(nombre: nom, dias: dias, semanas: semanas!, minutos: minutos, horas: horas!, restantes: restantes)
-                            navigationController!.popViewController(animated: true)
-                            
                             var time = 5
+                            var identifiers = [String]()
                             
                             while(restantes != 0) {
                                 
                                 var content = UNMutableNotificationContent()
                                 
-                                content.title = "Tomate tu medicina"
-                                content.body = nom
+                                content.title = "Tomate tu Medicina"
+                                content.body = "\(nom) - \(restantes - 1) restantes"
                                 content.sound = UNNotificationSound.default()
                                 
                                 var trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
-                                var request = UNNotificationRequest(identifier: nom, content: content, trigger: trigger)
+                                var request = UNNotificationRequest(identifier: "nom_\(restantes)", content: content, trigger: trigger)
                                 
                                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
                                 
@@ -293,6 +295,9 @@ class AgregarMedViewController: UIViewController {
                                 time = time + time
                                 
                             }
+                            
+                            delegado.agregaMedicina(nombre: nom, dias: dias, semanas: semanas!, minutos: minutos, horas: horas!, identifiers: identifiers)
+                            navigationController!.popViewController(animated: true)
                             
                         } else {
                             
@@ -330,6 +335,7 @@ class AgregarMedViewController: UIViewController {
         
     }
 
+    
     /*
     // MARK: - Navigation
 

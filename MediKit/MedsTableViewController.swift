@@ -26,11 +26,23 @@ class MedsTableViewController: UITableViewController, protocoloAgregaMedicina {
         // Dispose of any resources that can be recreated.
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: listaMeds[indexPath.row].identifiers )
+            listaMeds.remove(at: indexPath.row)
+            tableView.reloadData()
+            
+        }
+        
+    }
+    
     // MARK: - Metodos de protocolo Agregar Medicina
     
-    func agregaMedicina(nombre: String, dias: Int, semanas: Int, minutos: Int, horas: Int, restantes: Int) {
+    func agregaMedicina(nombre: String, dias: Int, semanas: Int, minutos: Int, horas: Int, identifiers: [String]) {
         
-        let medicina = Med(nombre: nombre, dias: dias, semanas: semanas, minutos: minutos, horas: horas, restantes: restantes);
+        let medicina = Med(nombre: nombre, dias: dias, semanas: semanas, minutos: minutos, horas: horas, identifiers: identifiers);
         
         listaMeds.append(medicina)
         tableView.reloadData()
@@ -54,7 +66,6 @@ class MedsTableViewController: UITableViewController, protocoloAgregaMedicina {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = listaMeds[indexPath.row].nombre
-        cell.detailTextLabel?.text = "\(listaMeds[indexPath.row].restantes!)"
 
         return cell
     }

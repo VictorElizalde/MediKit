@@ -15,15 +15,15 @@ class Med: NSObject {
     var semanas : Int!
     var minutos : Int!
     var horas : Int!
-    var restantes : Int!
+    var identifiers = [String]()
     
-    init(nombre: String, dias: Int, semanas: Int, minutos: Int, horas: Int, restantes: Int) {
+    init(nombre: String, dias: Int, semanas: Int, minutos: Int, horas: Int, identifiers: [String]) {
         self.nombre = nombre
         self.dias = dias
         self.semanas = semanas
         self.minutos = minutos
         self.horas = horas
-        self.restantes = restantes
+        self.identifiers = identifiers
     }
     
 }
