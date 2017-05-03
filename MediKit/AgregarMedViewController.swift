@@ -90,23 +90,23 @@ class AgregarMedViewController: UIViewController {
                             navigationController!.popViewController(animated: true)
                             
                             var i = 2
+                            var time = 15.0
                             
                             while(i != 0) {
                                 
                                 var content = UNMutableNotificationContent()
                                 
                                 content.title = "Tomate tu medicina \(i)"
-                                content.subtitle = "Hola"
                                 content.body = "Hola"
+                                content.sound = UNNotificationSound.default()
                                 
-                                var trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+                                var trigger = UNTimeIntervalNotificationTrigger(timeInterval: time, repeats: false)
                                 var request = UNNotificationRequest(identifier: "\(i)", content: content, trigger: trigger)
                                 
                                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
                                 
-                                print("Hola")
-                                
                                 i = i-1
+                                time = time + time
                                 
                             }
 
@@ -135,10 +135,11 @@ class AgregarMedViewController: UIViewController {
                     
                     let horas = Int(minHorTF.text!)
                     let minutos = -1
-                    let restantes = (dias!*24*60)/(horas!*60)
                     
                     if horas != nil {
                         
+                        let restantes = (dias!*24*60)/(horas!*60)
+
                         if nom != "" && dias != nil && horas != nil {
                             
                             delegado.agregaMedicina(nombre: nom, dias: dias!, semanas: semanas, minutos: minutos, horas: horas!, restantes: restantes)
@@ -190,10 +191,11 @@ class AgregarMedViewController: UIViewController {
                     
                     let minutos = Int(minHorTF.text!)
                     let horas = -1
-                    let restantes = (semanas!*7*24*60)/minutos!
                     
                     if minutos != nil {
                         
+                        let restantes = (semanas!*7*24*60)/minutos!
+
                         if nom != "" && semanas != nil && minutos != nil {
                             
                             delegado.agregaMedicina(nombre: nom, dias: dias, semanas: semanas!, minutos: minutos!, horas: horas, restantes: restantes)
@@ -223,10 +225,11 @@ class AgregarMedViewController: UIViewController {
                     
                     let horas = Int(minHorTF.text!)
                     let minutos = -1
-                    let restantes = (semanas!*7*24*60)/(horas!*60)
                     
                     if horas != nil {
                         
+                        let restantes = (semanas!*7*24*60)/(horas!*60)
+
                         if nom != "" && semanas != nil && horas != nil {
                             
                             delegado.agregaMedicina(nombre: nom, dias: dias, semanas: semanas!, minutos: minutos, horas: horas!, restantes: restantes)
