@@ -79,9 +79,10 @@ class AgregarMedViewController: UIViewController {
                     
                     let minutos = Int(minHorTF.text!)
                     let horas = -1
-                    let restantes = (dias!*24*60)/minutos!
                     
                     if minutos != nil {
+                        
+                        let restantes = (dias!*24*60)/minutos!
                         
                         if nom != "" && dias != nil && minutos != nil {
                             
@@ -112,7 +113,7 @@ class AgregarMedViewController: UIViewController {
                             
                         } else {
                             
-                            let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos", preferredStyle: .alert)
+                            let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
                             
                             alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                             
@@ -122,7 +123,7 @@ class AgregarMedViewController: UIViewController {
                         
                     } else {
                         
-                        let alerta = UIAlertController(title: "Alerta", message: "Solo se aceptan datos numéricos enteros en el campo de minutos", preferredStyle: .alert)
+                        let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
                         
                         alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                         
@@ -146,7 +147,7 @@ class AgregarMedViewController: UIViewController {
                         } else {
                             
                             
-                            let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos", preferredStyle: .alert)
+                            let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
                             
                             alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                             
@@ -157,7 +158,7 @@ class AgregarMedViewController: UIViewController {
                         
                     } else {
                         
-                        let alerta = UIAlertController(title: "Alerta", message: "Solo se aceptan datos numéricos enteros en el campo de horas", preferredStyle: .alert)
+                        let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
                         
                         alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                         
@@ -169,7 +170,7 @@ class AgregarMedViewController: UIViewController {
                 
             } else {
                 
-                let alerta = UIAlertController(title: "Alerta", message: "Solo se aceptan datos numéricos enteros en el campo de dias", preferredStyle: .alert)
+                let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
                 
                 alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 
@@ -200,7 +201,7 @@ class AgregarMedViewController: UIViewController {
                             
                         } else {
                             
-                            let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos", preferredStyle: .alert)
+                            let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
                             
                             alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                             
@@ -210,7 +211,7 @@ class AgregarMedViewController: UIViewController {
                         
                     } else {
                         
-                        let alerta = UIAlertController(title: "Alerta", message: "Solo se aceptan datos numéricos enteros en el campo de minutos", preferredStyle: .alert)
+                        let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
                         
                         alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                         
@@ -233,7 +234,7 @@ class AgregarMedViewController: UIViewController {
                             
                         } else {
                             
-                            let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos", preferredStyle: .alert)
+                            let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
                             
                             alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                             
@@ -243,7 +244,7 @@ class AgregarMedViewController: UIViewController {
                         
                     } else {
                         
-                        let alerta = UIAlertController(title: "Alerta", message: "Solo se aceptan datos numéricos enteros en el campo de horas", preferredStyle: .alert)
+                        let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
                         
                         alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                         
@@ -255,7 +256,7 @@ class AgregarMedViewController: UIViewController {
                 
             } else {
                 
-                let alerta = UIAlertController(title: "Alerta", message: "Solo se aceptan datos numéricos enteros en el campo de semanas", preferredStyle: .alert)
+                let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
                 
                 alerta.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 
