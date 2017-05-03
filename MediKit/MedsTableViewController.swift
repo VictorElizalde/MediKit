@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class MedsTableViewController: UITableViewController, protocoloAgregaMedicina {
 
@@ -16,6 +17,7 @@ class MedsTableViewController: UITableViewController, protocoloAgregaMedicina {
         super.viewDidLoad()
         
         title = "Medicinas"
+//        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         
     }
 

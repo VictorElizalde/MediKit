@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 protocol protocoloAgregaMedicina {
     func agregaMedicina(nombre: String, dias: Int, semanas: Int, minutos: Int, horas: Int, restantes: Int) -> Void
@@ -87,6 +88,28 @@ class AgregarMedViewController: UIViewController {
                             delegado.agregaMedicina(nombre: nom, dias: dias!, semanas: semanas, minutos: minutos!, horas: horas, restantes: restantes)
                             navigationController!.popViewController(animated: true)
                             
+                            var i = 2
+                            
+                            while(i != 0) {
+                                
+                                var content = UNMutableNotificationContent()
+                                
+                                content.title = "Tomate tu medicina \(i)"
+                                content.subtitle = "Hola"
+                                content.body = "Hola"
+                                
+                                var trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+                                var request = UNNotificationRequest(identifier: "\(i)", content: content, trigger: trigger)
+                                
+                                UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                                
+                                print("Hola")
+                                
+                                i = i-1
+                                
+                            }
+
+                            
                         } else {
                             
                             let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos", preferredStyle: .alert)
@@ -155,7 +178,6 @@ class AgregarMedViewController: UIViewController {
                 
             }
             
-            
         } else {
             
             let semanas = Int(diaSemTF.text!)
@@ -218,7 +240,6 @@ class AgregarMedViewController: UIViewController {
                             present(alerta, animated: true, completion: nil)
                             
                         }
-                        
                         
                     } else {
                         

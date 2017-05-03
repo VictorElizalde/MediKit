@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
     
@@ -27,7 +28,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let tbController = self.window!.rootViewController as! UITabBarController
 //        
 //        tbController.tabBar.barTintColor = UIColorFromRGB(rgbValue: 0x80E3FF)
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (allowed, error) in
+            //handle any errors
+        }
+        
+        UNUserNotificationCenter.current().delegate = self
         return true
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(.alert)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        //
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
