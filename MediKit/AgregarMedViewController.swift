@@ -144,7 +144,7 @@ class AgregarMedViewController: UIViewController {
                             delegado.agregaMedicina(nombre: nom, dias: dias!, semanas: semanas, minutos: minutos, horas: horas!, restantes: restantes)
                             navigationController!.popViewController(animated: true)
                             
-                            var time = 2
+                            var time = 15
                             
                             while(restantes != 0) {
                                 
@@ -220,6 +220,26 @@ class AgregarMedViewController: UIViewController {
                             delegado.agregaMedicina(nombre: nom, dias: dias, semanas: semanas!, minutos: minutos!, horas: horas, restantes: restantes)
                             navigationController!.popViewController(animated: true)
                             
+                            var time = 5
+                            
+                            while(restantes != 0) {
+                                
+                                var content = UNMutableNotificationContent()
+                                
+                                content.title = "Tomate tu medicina"
+                                content.body = nom
+                                content.sound = UNNotificationSound.default()
+                                
+                                var trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
+                                var request = UNNotificationRequest(identifier: nom, content: content, trigger: trigger)
+                                
+                                UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                                
+                                restantes = restantes - 1
+                                time = time + time
+                                
+                            }
+                            
                         } else {
                             
                             let alerta = UIAlertController(title: "Alerta", message: "Todos los campos deben estar llenos con datos numéricos enteros", preferredStyle: .alert)
@@ -253,6 +273,26 @@ class AgregarMedViewController: UIViewController {
                             
                             delegado.agregaMedicina(nombre: nom, dias: dias, semanas: semanas!, minutos: minutos, horas: horas!, restantes: restantes)
                             navigationController!.popViewController(animated: true)
+                            
+                            var time = 5
+                            
+                            while(restantes != 0) {
+                                
+                                var content = UNMutableNotificationContent()
+                                
+                                content.title = "Tomate tu medicina"
+                                content.body = nom
+                                content.sound = UNNotificationSound.default()
+                                
+                                var trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
+                                var request = UNNotificationRequest(identifier: nom, content: content, trigger: trigger)
+                                
+                                UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                                
+                                restantes = restantes - 1
+                                time = time + time
+                                
+                            }
                             
                         } else {
                             
