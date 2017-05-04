@@ -69,11 +69,9 @@ class HospitalsTableViewController: UITableViewController {
         return cell
     }
     
-    
-    @IBAction func goToMaps(_ sender: UIButton) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let indexPath = tableView.indexPathForSelectedRow
-        let hospital = listaHospitales[(indexPath?.row)!]
+        let hospital = listaHospitales[(indexPath.row)]
         
         UIApplication.shared.open(URL(string: hospital.map)!)
         
