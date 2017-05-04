@@ -86,8 +86,8 @@ class AgregarMedViewController: UIViewController {
                         
                         if nom != "" && dias != nil && minutos != nil {
                             
-                            var time = 5
-                            let inter = 5
+                            var time = minutos!*60
+                            let inter = minutos!*60
                             var identifiers = [String]()
                             
                             while(restantes != 0) {
@@ -143,8 +143,8 @@ class AgregarMedViewController: UIViewController {
 
                         if nom != "" && dias != nil && horas != nil {
                             
-                            var time = 5
-                            let inter = 5
+                            var time = horas!*60*60
+                            let inter = horas!*60*60
                             var identifiers = [String]()
                             
                             while(restantes != 0) {
@@ -220,8 +220,8 @@ class AgregarMedViewController: UIViewController {
 
                         if nom != "" && semanas != nil && minutos != nil {
                             
-                            var time = 5
-                            let inter = 5
+                            var time = minutos!*60
+                            let inter = minutos!*60
                             var identifiers = [String]()
                             
                             while(restantes != 0) {
@@ -277,8 +277,8 @@ class AgregarMedViewController: UIViewController {
 
                         if nom != "" && semanas != nil && horas != nil {
                             
-                            var time = 5
-                            let inter = 5
+                            var time = horas!*60*60
+                            let inter = horas!*60*60
                             var identifiers = [String]()
                             
                             while(restantes != 0) {
