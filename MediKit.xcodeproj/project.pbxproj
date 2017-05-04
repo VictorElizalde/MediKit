@@ -14,6 +14,9 @@
 		982FA02E1E7E0F0D0049BD69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982FA02C1E7E0F0D0049BD69 /* LaunchScreen.storyboard */; };
 		9861019C1EBABF510012D8C6 /* MedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861019B1EBABF510012D8C6 /* MedTableViewCell.swift */; };
 		9861019E1EBAC9EF0012D8C6 /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861019D1EBAC9EF0012D8C6 /* HospitalTableViewCell.swift */; };
+		986101A01EBBACAA0012D8C6 /* TelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9861019F1EBBACAA0012D8C6 /* TelTableViewCell.swift */; };
+		986101A21EBBAE780012D8C6 /* TelsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986101A11EBBAE780012D8C6 /* TelsTableViewController.swift */; };
+		986101A41EBBAEC40012D8C6 /* Tel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986101A31EBBAEC40012D8C6 /* Tel.swift */; };
 		98ED45C71EABE64D0032BBAC /* HospitalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED45C61EABE64D0032BBAC /* HospitalsTableViewController.swift */; };
 		98ED45C91EABE7380032BBAC /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED45C81EABE7380032BBAC /* Hospital.swift */; };
 		98ED45CB1EAC42C80032BBAC /* MedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED45CA1EAC42C80032BBAC /* MedsTableViewController.swift */; };
@@ -31,6 +34,9 @@
 		982FA02F1E7E0F0D0049BD69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9861019B1EBABF510012D8C6 /* MedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedTableViewCell.swift; sourceTree = "<group>"; };
 		9861019D1EBAC9EF0012D8C6 /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
+		9861019F1EBBACAA0012D8C6 /* TelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelTableViewCell.swift; sourceTree = "<group>"; };
+		986101A11EBBAE780012D8C6 /* TelsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelsTableViewController.swift; sourceTree = "<group>"; };
+		986101A31EBBAEC40012D8C6 /* Tel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tel.swift; sourceTree = "<group>"; };
 		98ED45C61EABE64D0032BBAC /* HospitalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalsTableViewController.swift; sourceTree = "<group>"; };
 		98ED45C81EABE7380032BBAC /* Hospital.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
 		98ED45CA1EAC42C80032BBAC /* MedsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedsTableViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,9 @@
 				982FA0211E7E0F0D0049BD69 /* AppDelegate.swift */,
 				982FA0231E7E0F0D0049BD69 /* InfoVC.swift */,
 				982FA0271E7E0F0D0049BD69 /* Main.storyboard */,
+				986101A31EBBAEC40012D8C6 /* Tel.swift */,
+				986101A11EBBAE780012D8C6 /* TelsTableViewController.swift */,
+				9861019F1EBBACAA0012D8C6 /* TelTableViewCell.swift */,
 				9861019D1EBAC9EF0012D8C6 /* HospitalTableViewCell.swift */,
 				9861019B1EBABF510012D8C6 /* MedTableViewCell.swift */,
 				98ED45CE1EAC4BDF0032BBAC /* AgregarMedViewController.swift */,
@@ -161,11 +170,14 @@
 				982FA0221E7E0F0D0049BD69 /* AppDelegate.swift in Sources */,
 				98ED45C91EABE7380032BBAC /* Hospital.swift in Sources */,
 				9861019C1EBABF510012D8C6 /* MedTableViewCell.swift in Sources */,
+				986101A01EBBACAA0012D8C6 /* TelTableViewCell.swift in Sources */,
 				98ED45CF1EAC4BDF0032BBAC /* AgregarMedViewController.swift in Sources */,
 				98ED45C71EABE64D0032BBAC /* HospitalsTableViewController.swift in Sources */,
 				98ED45CB1EAC42C80032BBAC /* MedsTableViewController.swift in Sources */,
 				98ED45CD1EAC42D50032BBAC /* Meds.swift in Sources */,
 				982FA0241E7E0F0D0049BD69 /* InfoVC.swift in Sources */,
+				986101A41EBBAEC40012D8C6 /* Tel.swift in Sources */,
+				986101A21EBBAE780012D8C6 /* TelsTableViewController.swift in Sources */,
 				9861019E1EBAC9EF0012D8C6 /* HospitalTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

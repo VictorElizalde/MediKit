@@ -17,7 +17,7 @@ class MedsTableViewController: UITableViewController, protocoloAgregaMedicina {
         super.viewDidLoad()
         
         title = "Medicinas"
-//        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         
     }
 

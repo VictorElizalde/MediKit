@@ -64,7 +64,7 @@ class AgregarMedViewController: UIViewController {
         
     }
     
-    @IBAction func AgregaMed(_ sender: UIButton) {
+    @IBAction func AddMed(_ sender: UIBarButtonItem) {
         
         let nom = nombreTF.text!
         
@@ -140,7 +140,7 @@ class AgregarMedViewController: UIViewController {
                     if horas != nil {
                         
                         var restantes = (dias!*24*60)/(horas!*60)
-
+                        
                         if nom != "" && dias != nil && horas != nil {
                             
                             var time = horas!*60*60
@@ -217,7 +217,7 @@ class AgregarMedViewController: UIViewController {
                     if minutos != nil {
                         
                         var restantes = (semanas!*7*24*60)/minutos!
-
+                        
                         if nom != "" && semanas != nil && minutos != nil {
                             
                             var time = minutos!*60
@@ -274,7 +274,7 @@ class AgregarMedViewController: UIViewController {
                     if horas != nil {
                         
                         var restantes = (semanas!*7*24*60)/(horas!*60)
-
+                        
                         if nom != "" && semanas != nil && horas != nil {
                             
                             var time = horas!*60*60
@@ -339,6 +339,12 @@ class AgregarMedViewController: UIViewController {
         
     }
 
+
+    @IBAction func awayKeyboard(_ sender: UITapGestureRecognizer) {
+        
+        view.endEditing(true)
+        
+    }
     
     /*
     // MARK: - Navigation
