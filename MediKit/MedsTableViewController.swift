@@ -64,8 +64,29 @@ class MedsTableViewController: UITableViewController, protocoloAgregaMedicina {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = listaMeds[indexPath.row].nombre
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MedTableViewCell
+        
+        cell.nomLabel.text = listaMeds[indexPath.row].nombre
+        
+        if listaMeds[indexPath.row].dias != -1 {
+            
+            cell.duracionLabel.text = "\(listaMeds[indexPath.row].dias!) día(s)"
+            
+        } else {
+            
+            cell.duracionLabel.text = "\(listaMeds[indexPath.row].semanas!) semana(s)"
+    
+        }
+        
+        if listaMeds[indexPath.row].minutos != -1 {
+            
+            cell.dosisLabel.text = "Cada \(listaMeds[indexPath.row].minutos!) minuto(s)"
+            
+        } else {
+            
+            cell.dosisLabel.text = "Cada \(listaMeds[indexPath.row].horas!) hora(s)"
+            
+        }
 
         return cell
     }
