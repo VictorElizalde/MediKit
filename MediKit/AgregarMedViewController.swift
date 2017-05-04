@@ -87,26 +87,26 @@ class AgregarMedViewController: UIViewController {
                         if nom != "" && dias != nil && minutos != nil {
                             
                             var time = 5
+                            let inter = 5
                             var identifiers = [String]()
                             
                             while(restantes != 0) {
                                 
-                                var content = UNMutableNotificationContent()
+                                let content = UNMutableNotificationContent()
                                 
                                 content.title = "Tomate tu Medicina"
                                 content.body = "\(nom) - \(restantes - 1) restantes"
                                 content.sound = UNNotificationSound.default()
                                 
-                                var trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
-                                var request = UNNotificationRequest(identifier: "\(nom)_\(restantes)", content: content, trigger: trigger)
+                                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
+                                let request = UNNotificationRequest(identifier: "\(nom)_\(restantes)", content: content, trigger: trigger)
                                 
                                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
                                 
                                 identifiers.append("\(nom)_\(restantes)")
                                 
                                 restantes = restantes - 1
-                                time = time + time
-                                
+                                time = time + inter
                             }
                             
                             delegado.agregaMedicina(nombre: nom, dias: dias!, semanas: semanas, minutos: minutos!, horas: horas, identifiers: identifiers)
@@ -144,26 +144,26 @@ class AgregarMedViewController: UIViewController {
                         if nom != "" && dias != nil && horas != nil {
                             
                             var time = 5
+                            let inter = 5
                             var identifiers = [String]()
                             
                             while(restantes != 0) {
                                 
-                                var content = UNMutableNotificationContent()
+                                let content = UNMutableNotificationContent()
                                 
                                 content.title = "Tomate tu Medicina"
                                 content.body = "\(nom) - \(restantes - 1) restantes"
                                 content.sound = UNNotificationSound.default()
                                 
-                                var trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
-                                var request = UNNotificationRequest(identifier: "\(nom)_\(restantes)", content: content, trigger: trigger)
+                                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
+                                let request = UNNotificationRequest(identifier: "\(nom)_\(restantes)", content: content, trigger: trigger)
                                 
                                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
                                 
                                 identifiers.append("\(nom)_\(restantes)")
                                 
                                 restantes = restantes - 1
-                                time = time + time
-                                
+                                time = time + inter
                             }
                             
                             delegado.agregaMedicina(nombre: nom, dias: dias!, semanas: semanas, minutos: minutos, horas: horas!, identifiers: identifiers)
@@ -221,24 +221,26 @@ class AgregarMedViewController: UIViewController {
                         if nom != "" && semanas != nil && minutos != nil {
                             
                             var time = 5
+                            let inter = 5
                             var identifiers = [String]()
                             
                             while(restantes != 0) {
                                 
-                                var content = UNMutableNotificationContent()
+                                let content = UNMutableNotificationContent()
                                 
                                 content.title = "Tomate tu Medicina"
                                 content.body = "\(nom) - \(restantes - 1) restantes"
                                 content.sound = UNNotificationSound.default()
                                 
-                                var trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
-                                var request = UNNotificationRequest(identifier: "nom_\(restantes)", content: content, trigger: trigger)
+                                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
+                                let request = UNNotificationRequest(identifier: "\(nom)_\(restantes)", content: content, trigger: trigger)
                                 
                                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
                                 
-                                restantes = restantes - 1
-                                time = time + time
+                                identifiers.append("\(nom)_\(restantes)")
                                 
+                                restantes = restantes - 1
+                                time = time + inter
                             }
                             
                             delegado.agregaMedicina(nombre: nom, dias: dias, semanas: semanas!, minutos: minutos!, horas: horas, identifiers: identifiers)
@@ -276,24 +278,26 @@ class AgregarMedViewController: UIViewController {
                         if nom != "" && semanas != nil && horas != nil {
                             
                             var time = 5
+                            let inter = 5
                             var identifiers = [String]()
                             
                             while(restantes != 0) {
                                 
-                                var content = UNMutableNotificationContent()
+                                let content = UNMutableNotificationContent()
                                 
                                 content.title = "Tomate tu Medicina"
                                 content.body = "\(nom) - \(restantes - 1) restantes"
                                 content.sound = UNNotificationSound.default()
                                 
-                                var trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
-                                var request = UNNotificationRequest(identifier: "nom_\(restantes)", content: content, trigger: trigger)
+                                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(time), repeats: false)
+                                let request = UNNotificationRequest(identifier: "\(nom)_\(restantes)", content: content, trigger: trigger)
                                 
                                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
                                 
-                                restantes = restantes - 1
-                                time = time + time
+                                identifiers.append("\(nom)_\(restantes)")
                                 
+                                restantes = restantes - 1
+                                time = time + inter
                             }
                             
                             delegado.agregaMedicina(nombre: nom, dias: dias, semanas: semanas!, minutos: minutos, horas: horas!, identifiers: identifiers)
